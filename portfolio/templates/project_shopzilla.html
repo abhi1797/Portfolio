@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+                    <h2 class="project__heading"> Overview </h2>
+                    <p>
+                        Our Habit Tracker is a web application designed to help users build and maintain positive habits through effective tracking and visualization. Built with Python and Flask,
+                        this project provides an intuitive interface for users to monitor their daily habits and make meaningful progress toward their personal goals.
+                    </p>
+                    <p>
+                        The application features a user-friendly design, allowing users to easily create,
+                        set daily goals. With MongoDB as the data management solution, we ensure efficient storage and retrieval of user information,
+                        providing a scalable framework for habit tracking.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                            <li class="technology-list__item">Sqlite3</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                        Github link
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}

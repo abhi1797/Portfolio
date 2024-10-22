@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" >
+{% block content %}
+    <main class="main main--content">
+        <dl>
+            <div class="contact">
+                <dt>Email:</dt>
+                <dd class="contact__details">
+                    <a class="contact__link" href="mailto:abhijit.devops17@gmail.com">
+                        abhijit.devops17 [at] gmail.com
+                    </a>
+                </dd>
+            </div>
+            <div class="contact">
+                <dt>Github:</dt>
+                <dd class="contact__details">
+                    <a class="contact__link" href="https://github.com/abhi1797">
+                        @abhi1797
+                    </a>
+                </dd>
+            </div>
+            <div class="contact">
+                <dt>LinkedIn:</dt>
+                <dd class="contact__details">
+                    <a class="contact__link" href="https://www.linkedin.com/in/abhijeetsarkar112/">
+                        @Abhijit
+                    </a>
+                </dd>
+            </div>
+            <div class="contact">
+                <dt>Blogs:</dt>
+                <dd class="contact__details">
+                    <a class="contact__link" href="https://medium.com/@abhijeet.sarkar112">
+                        Tech blogs
+                    </a>
+                </dd>
+            </div>
+        </dl>
+    </main>
+
+{% endblock %}
